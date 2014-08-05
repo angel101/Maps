@@ -18,7 +18,7 @@ import javax.swing.JLabel;
  * @author angel
  */
 public class Calle extends javax.swing.JFrame {
-    private final String path=("srs/foto_mapa-jpg");
+    private final String path=("srs/Mapa_foto.jpg");
 
     /**
      * Creates new form Calle
@@ -40,6 +40,7 @@ public class Calle extends javax.swing.JFrame {
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1033, 760));
 
         setLayout(new BorderLayout());
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource(path));
@@ -48,12 +49,16 @@ public class Calle extends javax.swing.JFrame {
         img = new ImageIcon(newimg);
         final JLabel background = new JLabel(img);
         add(background);
+        background.setText(null);
+        background.setOpaque(true);
+        background.setPreferredSize(new java.awt.Dimension(1366, 760));
+        background.setRequestFocusEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 765, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
